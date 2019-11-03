@@ -2,8 +2,7 @@ pipeline{
     agent none
     stages {
         stage('infrastructure') {
-            when{
-            }
+
             agent {
                 dockerfile {
                     dir 'application-one'
