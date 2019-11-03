@@ -8,9 +8,7 @@ pipeline{
                     dir 'application-one'
                 }
             }
-            steps {
-                sh 'ls'
-            }
+
         }
     }
 }
