@@ -2,13 +2,15 @@ pipeline{
     agent none
     stages {
         stage('infrastructure') {
+            when{
+            }
             agent {
                 dockerfile {
                     dir 'application-one'
                 }
             }
             steps {
-                sh 'cdk ls'
+                sh 'ls'
             }
         }
     }
