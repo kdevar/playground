@@ -7,7 +7,7 @@ node {
         infraImage = docker.build("test:${env.BUILD_ID}", "application-one")
     }
 
-    customImage.inside {
+    infraImage.inside {
         sh 'ls'
         sh 'cdk ls'
     }
