@@ -16,9 +16,9 @@ pipeline{
             }
             steps {
                 sh 'python --version'
-                sh './application-one ls'
-                sh '/app ls'
-                sh 'cdk ls'
+                sh 'ls -l'
+
+
 
             }
         }
