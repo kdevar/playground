@@ -8,7 +8,12 @@ pipeline{
                     dir 'application-one'
                 }
             }
-
+            steps {
+                sh 'ls'
+            }
+            steps {
+                sh 'cdk ls'
+            }
         }
     }
 }
