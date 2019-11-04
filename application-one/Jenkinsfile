@@ -2,7 +2,6 @@ pipeline{
     agent none
     stages {
         stage('infrastructure') {
-
             agent {
                 dockerfile {
                     dir 'application-one'
