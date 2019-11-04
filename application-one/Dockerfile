@@ -12,4 +12,6 @@ RUN ls
 
 RUN cdk ls
 
+USER root
+
 CMD ["cdk", "ls"]
