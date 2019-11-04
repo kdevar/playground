@@ -10,4 +10,6 @@ COPY . .
 
 RUN ls
 
+USER root
+
 CMD ["cdk", "ls"]
