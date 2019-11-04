@@ -10,6 +10,6 @@ COPY . .
 
 RUN ls
 
-USER root
+USER jenkins
 
 CMD ["cdk", "ls"]
