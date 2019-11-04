@@ -8,9 +8,6 @@ pipeline{
                 }
             }
             steps {
-                sh 'ls'
-            }
-            steps {
                 sh 'cdk ls'
             }
         }
