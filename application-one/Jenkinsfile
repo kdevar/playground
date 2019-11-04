@@ -8,8 +8,10 @@ pipeline{
                 }
             }
             steps {
-                sh 'ls'
-                sh 'cdk ls'
+                dir('/app'){
+                    sh 'ls'
+                    sh 'cdk ls'
+                }
             }
         }
     }
