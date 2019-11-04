@@ -1,14 +1,19 @@
-node {
-    checkout scm
-
-    def infraImage
-
-    stage('build image') {
-        infraImage = docker.build("test:${env.BUILD_ID}", "application-one")
-    }
-
-    infraImage.inside {
-        sh './application-one ls'
-        sh '/applicationo-one cdk ls'
+pipeline{
+    agent none
+    stages {
+        stage('infrastructure') {
+            agent {
+                dockerfile {
+                    dir 'application-one'
+                    args '-u root'
+                }
+            }
+            steps {
+                dir('/app'){
+                    sh 'ls'
+                    sh 'cdk ls'
+                }
+            }
+        }
     }
 }
