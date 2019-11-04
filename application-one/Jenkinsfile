@@ -8,7 +8,7 @@ node {
     }
 
     infraImage.inside {
-        sh '/app ls'
-        sh '/app cdk ls'
+        sh './application-one ls'
+        sh '/applicationo-one cdk ls'
     }
 }
